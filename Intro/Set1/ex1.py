@@ -1,4 +1,5 @@
-
+import math
+from functools import reduce
 
 def cmmdc_manual(lista_numere):
 
@@ -18,6 +19,14 @@ def cmmdc_manual(lista_numere):
             break
 
     return rezultat
+
+
+def cmmdc_multiplu(*args):
+
+    if not args:
+        return None
+
+    return reduce(math.gcd, args)
 
 numere = [48, 70, 12]
 print(cmmdc_manual(numere))
